@@ -11,7 +11,13 @@
 				<span class="sep">{{agent.dir}}</span>
 			</div>
 			<div class="meta">
-				
+				<span class="btn" @click="add">
+					Specify Resources
+				</span>
+				<div class="sep">
+					Resources: 
+					<span v-for="item in agent.resources" class="tag" @click="del($index)">{{item}}</span > 
+				</div>
 			</div>
 		</div>
 	</div>
@@ -25,8 +31,13 @@ export default {
     return {
     }
   },
-  mounted () {
-    console.log(this.agent)
+  methods: {
+    add () {
+
+    },
+    del (index) {
+      this.agent.resources && this.agent.resources.splice(index, 1)
+    }
   }
 }
 </script>
@@ -60,6 +71,32 @@ export default {
 		.basic {
 			flex: 1;
 			display: flex;
+		}
+		
+		.meta {
+			margin-top: 20px;
+			display: flex;
+			
+			.tag {
+				margin-left: 15px;
+				cursor: pointer;
+				
+				&:after {
+					content: "x";
+					border: 1px solid #ddd;
+					color: #ddd;
+					border-radius: 50%;
+					height: 14px;
+					width: 14px;
+					display: inline-block;
+					font-size: 10px;
+					margin-left: 8px;
+				}
+			}
+		}
+		
+		.btn {
+			cursor: pointer;
 		}
 	}
 </style>
