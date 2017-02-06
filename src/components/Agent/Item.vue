@@ -16,7 +16,7 @@
 				</span>
 				<div class="sep">
 					Resources: 
-					<span v-for="item in agent.resources" class="tag" @click="del($index)">{{item}}</span > 
+					<p v-for="item in agent.resources" class="tag" @click="del($index)">{{item}}</p> 
 				</div>
 			</div>
 		</div>
@@ -80,6 +80,7 @@ export default {
 			.tag {
 				margin-left: 15px;
 				cursor: pointer;
+				display: inline-block;
 				
 				&:after {
 					content: "x";
@@ -99,4 +100,19 @@ export default {
 			cursor: pointer;
 		}
 	}
+	
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+		.item, .meta
+			flex-direction: column;
+			align-items: flex-start;
+		.item .round
+				align-self: center;
+			
+		.basic 
+			flex-direction: column;
+			align-items: flex-start;
+			
+			span
+				margin-top: 10px;
 </style>

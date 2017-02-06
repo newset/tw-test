@@ -8,8 +8,7 @@
 
 <script>
 require('./assets/css/reset.css')
-import * as Top from './components/Header'
-import Tabs from './components/Tabs'
+import {Top, Tabs} from './components'
 import { Agent } from './components/Agent'
 
 export default {

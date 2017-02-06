@@ -38,6 +38,7 @@ export default {
 <style lang="stylus" scoped>
 	.detail-container {
 		border: none;
+		width: 100%;
 		
 		section {
 			display: flex;
@@ -67,4 +68,5 @@ export default {
 			}
 		}
 	}
+
 </style>

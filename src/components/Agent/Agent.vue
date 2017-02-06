@@ -37,6 +37,7 @@ export default {
     @import '../../assets/css/var'
     
     .agents {
+        margin-bottom: 20px;
         display: flex;
         position: relative;
         width: 100%;
@@ -71,4 +72,16 @@ export default {
             border-left: 2px solid $bd-color;
         }
     }
+    
+
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+        .agents, .agent-container
+            flex-direction: column
+            
+            .box
+                padding: 0px
+                
+            .detail
+                border: none
 </style>

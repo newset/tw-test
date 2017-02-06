@@ -63,4 +63,10 @@ export default {
 			}
 		}
 	}
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+		.tabs	
+			flex-direction: column
+			ul
+				flex-direction: column
 </style>
